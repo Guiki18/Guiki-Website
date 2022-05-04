@@ -1,0 +1,17 @@
+{
+  "name": "guiki_website",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/Guiki18/Guiki-Website.git",
+  "author": "Guiki18 <foxzillapt17@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}
