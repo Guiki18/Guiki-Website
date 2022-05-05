@@ -1,5 +1,6 @@
 # Visual Studio Code Configurations
 .vscode/
+logs/
 
 # Logs
 logs
