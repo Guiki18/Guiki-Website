@@ -18,6 +18,9 @@ require('better-logging')(console, {
 
 app.use(express.json());
 app.use(express.static("express"));
+app.use(express.static(__dirname + '/web'));
+
+
 app.use('/', function (req, res) {
 	res.sendFile(path.join(__dirname + '/web/'));
 	const ip = req.socket.remoteAddress;
