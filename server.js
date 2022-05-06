@@ -10,7 +10,6 @@ require('better-logging')(console, {
 		debug: true,
 	}
 });
-const { lookup } = require('geoip-lite');
 
 app.use(express.json());
 app.use(express.static("express"));
@@ -18,16 +17,13 @@ app.use(express.static("express"));
 app.use('/', function (req, res) {
 	res.sendFile(path.join(__dirname + '/web/'));
 	const ip = req.socket.remoteAddress;
-	const lookupIp = lookup(ip);
-
+	
 	const jsonRequestInformation = {
 		"method": req.method,
 		"url": req.url,
 		"ip": {
 			"ip": ip,
-			"lookupIp": lookupIp
 		},
-
 	}
 
 	console.log("Received a Request : \n" + JSON.stringify(jsonRequestInformation, null, '\t'));
